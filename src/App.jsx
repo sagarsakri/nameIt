@@ -13,7 +13,7 @@ const App = () =>{
     const [suggestedNames, setSuggestedNames] = useState([]);
     const handleChange = (inputText) => {
         setHeaderExpanded(!inputText);
-        setSuggestedNames(inputText ? name(inputText) : []);
+        setSuggestedNames(inputText.length>0 ? name(inputText) : []);
     };
 
     return (
